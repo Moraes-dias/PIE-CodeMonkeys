@@ -1,0 +1,148 @@
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- SEÇÃO DE PRODUTOS --- */
+.produtos-section {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.produtos-section .section-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.produtos-section .section-subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* --- GRID DOS CARDS DE PRODUTO --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* --- ESTILO INDIVIDUAL DO CARD --- */
+.product-card {
+    text-align: left;
+    cursor: pointer; /* Indica que o card é clicável */
+}
+
+.product-card__image-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.product-card__image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+.product-card:hover .product-card__image-wrapper img {
+    transform: scale(1.08);
+}
+
+.product-card__title {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.product-card__description {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --- ESTILOS DO MODAL --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Classe que o JavaScript adiciona para mostrar o modal */
+.modal-overlay.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #95a5a6;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #2c3e50;
+}
+
+/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
