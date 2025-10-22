@@ -1,12 +1,66 @@
-/* --- ESTILOS GERAIS --- */
-body {
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {/* --- ESTILOS GERAIS --- */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
-    padding: 40px 20px;
-    display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navBar 
+{
+    display: flex;
+    background-color: brown;
+    align-items: center;
+    height: 56px;
+
+}
+
+.logoBar img
+{
+    height: 70px;
+    margin: 10px;
+}
+
+.textobar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+}
+
+.linkBar 
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20%;
+    gap: 40px;
+}
+
+.linkBar button
+{
+    font-size: 16px;
+}
+
+.primerTexto 
+{
+    margin-top: 70px;
+}
+
+.inicio
+{
+    margin-top: 70px;
+    font-size: 17.5px;
+    display: flex;
 }
 
 /* --- SEÇÃO DE PRODUTOS --- */
