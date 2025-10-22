@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fábrica de Móveis - Nossos Produtos</title>
+    
     <link rel="stylesheet" href="style.css">
-    <title>MóvelWeb</title>
 </head>
 <body>
     <header>
@@ -45,6 +46,80 @@
         </div>
 
     </section>
+
+    
+    <section class="produtos-section">
+        
+        <h2 class="section-title">Nossos Produtos</h2>
+        <p class="section-subtitle">Especializados em móveis personalizados para diferentes ambientes</p>
+
+        <div class="products-grid">
+            
+            <article class="product-card" 
+                data-title="Cozinhas Planejadas" 
+                data-description="Oferecemos soluções completas com armários, ilhas e bancadas que otimizam seu espaço e refletem seu estilo. Materiais de alta qualidade e acabamento impecável." 
+                data-image="https://images.pexels.com/photos/3074920/pexels-photo-3074920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="product-card__image-wrapper">
+                    <img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Puxador de metal em uma gaveta de cozinha planejada">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Cozinhas</h3>
+                    <p class="product-card__description">Armários, bancadas e móveis planejados para sua cozinha dos sonhos.</p>
+                </div>
+            </article>
+
+            <article class="product-card" 
+                data-title="Escritórios e Home Office" 
+                data-description="Crie um ambiente de trabalho produtivo e confortável. Nossas soluções incluem mesas ergonômicas, estantes e gaveteiros feitos sob medida para suas necessidades." 
+                data-image="https://images.pexels.com/photos/1170412/pexels-photo-1170412.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="product-card__image-wrapper">
+                    <img src="https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Bancada de trabalho de um artesão com ferramentas">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Escritórios</h3>
+                    <p class="product-card__description">Mesas, estantes e móveis funcionais para seu ambiente de trabalho.</p>
+                </div>
+            </article>
+
+            <article class="product-card" 
+                data-title="Mesas para Computador e Gamers" 
+                data-description="Construa o setup perfeito com mesas espaçosas e projetadas para performance, seja para trabalho ou para jogos. Ergonomia e design para suas longas sessões." 
+                data-image="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="product-card__image-wrapper">
+                    <img src="https://images.pexels.com/photos/1999463/pexels-photo-1999463.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Setup de um computador gamer com monitor e caixas de som">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Mesas para Computador</h3>
+                    <p class="product-card__description">Escrivaninhas ergonômicas e funcionais para home office e gamers.</p>
+                </div>
+            </article>
+
+            <article class="product-card" 
+                data-title="Móveis Modernos para Sala" 
+                data-description="Design que fala por si só. Painéis de TV, estantes, aparadores e mesas de centro que combinam funcionalidade e sofisticação para sua casa." 
+                data-image="https://images.pexels.com/photos/6492403/pexels-photo-6492403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                <div class="product-card__image-wrapper">
+                    <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mão abrindo uma porta de madeira em um ambiente moderno">
+                </div>
+                <div class="product-card__content">
+                    <h3 class="product-card__title">Móveis Modernos</h3>
+                    <p class="product-card__description">Peças exclusivas com design contemporâneo para sua casa.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <img src="" alt="Imagem do Produto" id="modalImage">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
 
 </body>
 </html>
