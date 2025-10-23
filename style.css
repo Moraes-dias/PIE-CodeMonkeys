@@ -271,3 +271,60 @@ span
         grid-template-columns: 1fr;
     }
 }
+
+
+/*Felipe Yuji*/
+.materiaiseacabamentos {
+    text-align: center;
+    /*mantêm o título e frase centralizado*/
+}
+
+.tiposdemadeira, .acabamentosdisponiveis {
+    margin: 25px auto;
+    width: 50%;
+    /*configurações para ONDE as bordas devem estar*/
+    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, não nenhuma modif*/
+}
+
+.acabamentosdisponiveisTABLE, .tiposdemadeiraTABLE {
+    border-spacing: 9px;
+    /*espaço entre os elementos, tive que dar esse nome para o TABLE*/
+}
+
+#madeira, #acabamentos {
+   font-size: 120%;
+   /*tamanho da fonte do subtítulo*/
+}
+
+.carvalho, .cedro, .mogno, .pinus, .natural, .vernizfoco, .vernizbrilhante, .encerado, .laca, .tingimento{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 9px;
+    /* configurações específicas para as bordas*/
+    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
+}
+
+.carvalho {background-color: #fff3d1; }
+.cedro {background-color: #ffe4e1;}
+.pinus {background-color: #fffbd1;}
+.mogno {background-color: #ffe3c2;}
+/*^ cores de cada madeira*/
+
+.acabamentosdisponiveis {
+    text-align: center;
+    vertical-align: middle;
+    max-width: 50%;
+    /*põe o contéudo no meio da aba. Ex: Natural*/
+}
+
+.imagensdasmadeiras {
+    width: 22%;
+    border-radius: 10px;
+    /*configurações para a imagem*/
+}
+
+.imagensdasmadeiras, .tiposdemadeira {
+    display: flex;
+    justify-content: center;
+    /*configurações para manter ambas divs na mesma linha*/
+}
