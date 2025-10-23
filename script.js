@@ -1,3 +1,34 @@
+//codigo do gregory
+//cria uma funcao para ele fazer scroll
+function scrollPara(id) 
+{
+    //cria uma constante para pegar o id que sera pasado (parametro)
+    const elemento = document.getElementById(id);
+    //o scrollIntoView fara ele rolar ate a parte indicada
+    //ele faz que o elemento faza um scroll suave e nao imediato por isso o smooth
+    elemento.scrollIntoView({behavior: 'smooth'})
+}
+
+    //cria uma const que tera todos os id para conseguir mapear
+    //dentro do conteudo tem as chaves e o value com o nome de cada
+  const mapScroll = {
+    inicioScroll: 'inicio',
+    produtoScroll: 'produtos',
+    materiasScroll: 'materiais',
+    contatoScroll: 'contato'
+  };
+
+  //ele vai pegar todas as chaves de mapScroll e percorrer elas para achar a que esta sendo usada
+  Object.keys(mapScroll).forEach(btnId => 
+    {
+        //cria uma const para usar de referencia dos botoes usando a variavel temporal criada
+        const botoao = document.getElementById(btnId);
+        //ele vai pegar o elemento achado e colocando numa outra const
+        const secaoId = mapScroll[btnId];
+        //e aqui pega os id do botoes e faz que quando for clicado um deles ele vai scrollar
+        botoao.addEventListener('click', () => scrollPara(secaoId));
+    });
+
 // Espera o documento HTML ser completamente carregado para rodar o script
 document.addEventListener('DOMContentLoaded', () => {
 
