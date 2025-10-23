@@ -135,10 +135,11 @@ span
 }
 
 /* --- SEÇÃO DE PRODUTOS --- */
+/* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
-    width: 100%;
     max-width: 1200px;
     text-align: center;
+    margin: 60px 15rem;
 }
 
 .produtos-section .section-title {
