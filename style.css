@@ -16,10 +16,11 @@ body {/* --- ESTILOS GERAIS --- */
 .navBar 
 {
     display: flex;
-    background-color: brown;
+    background-color: #1C1C1C;
     align-items: center;
     height: 56px;
-
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 .logoBar img
@@ -31,9 +32,11 @@ body {/* --- ESTILOS GERAIS --- */
 
 .textobar
 {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: start;
+    color: #F4B000;
     font-size: 18px;
     width: 20%;
 }
@@ -50,6 +53,7 @@ body {/* --- ESTILOS GERAIS --- */
 
 .linkBar button
 {
+    color: #F4B000;
     font-size: 14px;
     border: none;
     outline: none;
