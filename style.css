@@ -168,13 +168,14 @@ span
 /* --- ESTILO INDIVIDUAL DO CARD --- */
 .product-card {
     text-align: left;
-    cursor: pointer; /* Indica que o card é clicável */
+    
 }
 
 .product-card__image-wrapper {
     overflow: hidden;
     border-radius: 12px;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .product-card__image-wrapper img {
