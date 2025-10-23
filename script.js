@@ -1,12 +1,45 @@
 //codigo do gregory
-//cria uma funcao para ele fazer scroll
-function scrollPara(id) 
-{
-    //cria uma constante para pegar o id que sera pasado (parametro)
+//cria uma funcao para ele fazer scroll e coloca a duraçao do tempo que demorara para descer
+
+    let scrollAnimacao = null;
+function scrollPara(id, duracao = 800) {
+    //cria uma constante para identificar os elementos
     const elemento = document.getElementById(id);
-    //o scrollIntoView fara ele rolar ate a parte indicada
-    //ele faz que o elemento faza um scroll suave e nao imediato por isso o smooth
-    elemento.scrollIntoView({behavior: 'smooth'})
+    //testa se o elemento se nao for invalido
+    if (!elemento) return;
+
+    // Cancela animação anterior, se houver
+    if (scrollAnimacao) cancelAnimationFrame(scrollAnimacao);
+
+    //coloca o inicio no topo da pagina
+    const inicio = window.scrollY;
+    //ele mede a distancia que ele vai percorrer do inicio ate o destino
+    const destino = elemento.getBoundingClientRect().top + window.scrollY;
+    //ele faz o calculo do destino e do inicio 
+    const distancia = destino - inicio;
+    //inicia o tempo em null
+    let inicioTempo = null;
+
+    // criar uma funcao para determinar o tempo que vai demorar 
+    function animarScroll(tempoAtual) {
+        //Se ainda não definimos o início da animação, guardamos o tempo atual como referência inicial.
+        if (!inicioTempo) inicioTempo = tempoAtual;
+        //Calcula quanto tempo já passou desde o começo da animação.
+        const tempoDecorrido = tempoAtual - inicioTempo;
+        //tempoDecorrido / duracao → percentual de progresso da animação (0 = início, 1 = fim).
+        //Math.min(..., 1) → garante que a proporção não passe de 1, evitando ultrapassar o destino.
+        const proporcao = Math.min(tempoDecorrido / duracao, 1);
+        /*Move a página verticalmente (window.scrollTo) para a posição atual da animação:
+        inicio + distancia * proporcao → cálculo da posição interpolada entre início e destino.
+        Isso cria a movimentação suave uniforme, sem depender da distância. */
+        window.scrollTo(0, inicio + distancia * proporcao);
+        // quando foir atindido a distancia ele vai parar
+        if (tempoDecorrido < duracao) {
+            requestAnimationFrame(animarScroll);
+        }
+    }
+    //Inicia a animação chamando a função no próximo frame do navegador.
+    requestAnimationFrame(animarScroll);
 }
 
     //cria uma const que tera todos os id para conseguir mapear
