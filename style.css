@@ -281,6 +281,12 @@ span
 
 
 /*Felipe Yuji*/
+
+.minhaParteYuji 
+{
+    padding: 30px 0px;
+}
+
 .materiaiseacabamentos {
     text-align: center;
     /*mantêm o título e frase centralizado*/
@@ -338,33 +344,83 @@ span
 
 .finalOne 
 {
-    padding: 70px 0px;
+    background-color: #000000;
 }
 
 .caixafinal 
 {
-    margin: 0px 158px;
+    margin: 0px 435px;
     padding: 0px 14px;
 }
 
 .primerTextoFooter 
 {
-    background-color: blue;
     text-align: center;
-    
+    margin: 0px 0px 42px;
 }
 
 .primerTextoFooter h2
 {
+    color: #ffffff;
     font-size: 31.5px;
+    margin: 0px 0px 21px;
 }
 
 .primerTextoFooter p
 {
+    color: #ffffff;
     font-size: 17.5px;
 }
 
-.finalOne 
+.botoesfooter
 {
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0px 84px;
+}
+
+.botaoWhats 
+{
+    padding: 21px 28px;
+    height: 142.5px;
+    width: 280px;
+    border: none;
+    border-radius: 15px;
+    background-color: #FDB813;
+}
+
+.botaoInta
+{
+    padding: 21px 28px;
+    height: 142.5px;
+    width: 280px;
+    border: none;
+    border-radius: 15px;
+    background-color: #FDB813;
+}
+
+.imgWhats
+{
+    height: 48px;
+    width: 48px;
+}
+
+.instaImg 
+{
+    height: 48px;
+    width: 48px;
+}
+
+.ultimoText 
+{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    color: #b5b5b5;
+}
+
+.finalTwo 
+{
+    padding: 42px 0px;
 }
