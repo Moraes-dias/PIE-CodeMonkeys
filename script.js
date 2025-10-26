@@ -48,7 +48,9 @@ const mapScroll = {
     inicioScroll: 'inicio',
     produtoScroll: 'produtos',
     materiasScroll: 'materiais',
-    contatoScroll: 'contato'
+    contatoScroll: 'contato',
+
+    botonDireita: 'produtos'
 };
 
 //ele vai pegar todas as chaves de mapScroll e percorrer elas para achar a que esta sendo usada
