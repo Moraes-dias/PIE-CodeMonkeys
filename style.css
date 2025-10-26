@@ -121,6 +121,7 @@ span
 
 .botoes button 
 {
+    cursor: pointer;
     padding: 10.5px 28px;
     border-radius: 10px;
 }
@@ -333,4 +334,37 @@ span
     display: flex;
     justify-content: center;
     /*configurações para manter ambas divs na mesma linha*/
+}
+
+.finalOne 
+{
+    padding: 70px 0px;
+}
+
+.caixafinal 
+{
+    margin: 0px 158px;
+    padding: 0px 14px;
+}
+
+.primerTextoFooter 
+{
+    background-color: blue;
+    text-align: center;
+    
+}
+
+.primerTextoFooter h2
+{
+    font-size: 31.5px;
+}
+
+.primerTextoFooter p
+{
+    font-size: 17.5px;
+}
+
+.finalOne 
+{
+    background-color: red;
 }
