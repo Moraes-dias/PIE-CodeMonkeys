@@ -355,18 +355,20 @@ span
 .finalOne 
 {
     background-color: #000000;
+    padding-bottom: 10px;
 }
 
 .caixafinal 
 {
-    margin: 0px 435px;
+    margin: 0px 285px;
+    margin-left: 220px;
     padding: 0px 14px;
 }
 
 .primerTextoFooter 
 {
     text-align: center;
-    margin: 0px 0px 42px;
+    margin: 0px 0px 42px 10px;
 }
 
 .primerTextoFooter h2
@@ -398,6 +400,7 @@ span
     border: none;
     border-radius: 15px;
     background-color: #FDB813;
+    cursor: pointer;
 }
 
 .botaoInta
@@ -408,6 +411,7 @@ span
     border: none;
     border-radius: 15px;
     background-color: #FDB813;
+        cursor: pointer;
 }
 
 .imgWhats
