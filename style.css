@@ -301,18 +301,19 @@ span
    /*tamanho da fonte do subtítulo*/
 }
 
-.carvalho, .cedro, .mogno, .pinus, .natural, .vernizfoco, .vernizbrilhante, .encerado, .laca, .tingimento{
+.modelomadeira, .acabamento {
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 9px;
+    box-shadow: 1px 1px 1px lightgray;
     /* configurações específicas para as bordas*/
     /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
 }
 
-.carvalho {background-color: #fff3d1; }
-.cedro {background-color: #ffe4e1;}
-.pinus {background-color: #fffbd1;}
-.mogno {background-color: #ffe3c2;}
+#carvalho {background-color: #fff3d1; }
+#cedro {background-color: #ffe4e1;}
+#pinus {background-color: #fffbd1;}
+#mogno {background-color: #ffe3c2;}
 /*^ cores de cada madeira*/
 
 .acabamentosdisponiveis {
@@ -324,6 +325,7 @@ span
 
 .imagensdasmadeiras {
     width: 22%;
+    height: 15%;
     border-radius: 10px;
     /*configurações para a imagem*/
 }
@@ -331,5 +333,6 @@ span
 .imagensdasmadeiras, .tiposdemadeira {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     /*configurações para manter ambas divs na mesma linha*/
 }
