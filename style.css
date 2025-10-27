@@ -282,9 +282,11 @@ span
 
 /*Felipe Yuji*/
 
-.minhaParteYuji 
+.minhaParteYuji
 {
     padding: 30px 0px;
+    background-color:#fdf7e8;
+    /*adicionado cor de fundo */
 }
 
 .materiaiseacabamentos {
@@ -309,18 +311,24 @@ span
    /*tamanho da fonte do subtítulo*/
 }
 
-.carvalho, .cedro, .mogno, .pinus, .natural, .vernizfoco, .vernizbrilhante, .encerado, .laca, .tingimento{
-    border: 1px solid #eee;
+.modelomadeira, .acabamento {
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 9px;
+    box-shadow: 1px 1px 1px lightgray;
     /* configurações específicas para as bordas*/
     /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
 }
 
-.carvalho {background-color: #fff3d1; }
-.cedro {background-color: #ffe4e1;}
-.pinus {background-color: #fffbd1;}
-.mogno {background-color: #ffe3c2;}
+.acabamento {
+    background: white;
+    /*tive que separar essa class por conta do "background-color" do section "minhaParteYuji"*/
+} 
+
+#carvalho {background-color: #fff3d1; }
+#cedro {background-color: #ffe4e1;}
+#pinus {background-color: #fffbd1;}
+#mogno {background-color: #ffe3c2;}
 /*^ cores de cada madeira*/
 
 .acabamentosdisponiveis {
@@ -331,7 +339,8 @@ span
 }
 
 .imagensdasmadeiras {
-    width: 22%;
+    width: 30%;
+    height: 18%;
     border-radius: 10px;
     /*configurações para a imagem*/
 }
@@ -339,24 +348,27 @@ span
 .imagensdasmadeiras, .tiposdemadeira {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     /*configurações para manter ambas divs na mesma linha*/
 }
 
 .finalOne 
 {
     background-color: #000000;
+    padding-bottom: 10px;
 }
 
 .caixafinal 
 {
-    margin: 0px 435px;
+    margin: 0px 285px;
+    margin-left: 220px;
     padding: 0px 14px;
 }
 
 .primerTextoFooter 
 {
     text-align: center;
-    margin: 0px 0px 42px;
+    margin: 0px 0px 42px 10px;
 }
 
 .primerTextoFooter h2
@@ -388,6 +400,7 @@ span
     border: none;
     border-radius: 15px;
     background-color: #FDB813;
+    cursor: pointer;
 }
 
 .botaoInta
@@ -398,6 +411,7 @@ span
     border: none;
     border-radius: 15px;
     background-color: #FDB813;
+        cursor: pointer;
 }
 
 .imgWhats
@@ -423,4 +437,36 @@ span
 .finalTwo 
 {
     padding: 42px 0px;
+    color: #ffffff;
+    background-color: #15172b;
+}
+
+.colunasEfilasTABLE
+{
+    border-bottom: 1px solid rgb(102, 99, 137);
+    justify-self: center;
+    border-spacing: 9px;
+    width: 70%;
+}
+
+.table1
+{
+    text-align: left;
+}
+
+.coluna2 
+{
+    padding-right: 20%;
+}
+
+.coluna3
+{
+    padding-left: 30%;
+    /*configuração para onde deve estar a 3 coluna*/
+}
+
+.direitos 
+{
+    text-align: center;
+    color: rgb(180, 181, 183);
 }
