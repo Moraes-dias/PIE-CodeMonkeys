@@ -5,13 +5,22 @@
     box-sizing: border-box;
 }
 
+body {/* --- ESTILOS GERAIS --- */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
 .navBar 
 {
     display: flex;
-    background-color: brown;
+    background-color: #1C1C1C;
     align-items: center;
     height: 56px;
-
+    min-height: fit-content;
+    min-width: fit-content;
 }
 
 .logoBar img
@@ -23,9 +32,11 @@
 
 .textobar
 {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: start;
+    color: #F4B000;
     font-size: 18px;
     width: 20%;
 }
@@ -42,6 +53,7 @@
 
 .linkBar button
 {
+    color: #F4B000;
     font-size: 14px;
     border: none;
     outline: none;
@@ -109,6 +121,7 @@ span
 
 .botoes button 
 {
+    cursor: pointer;
     padding: 10.5px 28px;
     border-radius: 10px;
 }
@@ -124,4 +137,234 @@ span
 {
     border: 1px solid #793300;
     border-color: #793300;
+}
+
+/* --- SEÇÃO DE PRODUTOS --- */
+/* --- SEÇÃO DE PRODUTOS --- */
+.produtos-section {
+    max-width: 1200px;
+    text-align: center;
+    margin: 60px 15rem;
+}
+
+.produtos-section .section-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.produtos-section .section-subtitle {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+/* --- GRID DOS CARDS DE PRODUTO --- */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* --- ESTILO INDIVIDUAL DO CARD --- */
+.product-card {
+    text-align: left;
+    
+}
+
+.product-card__image-wrapper {
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.product-card__image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Efeito de zoom na imagem ao passar o mouse */
+.product-card:hover .product-card__image-wrapper img {
+    transform: scale(1.08);
+}
+
+.product-card__title {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.product-card__description {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --- ESTILOS DO MODAL --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Classe que o JavaScript adiciona para mostrar o modal */
+.modal-overlay.visible {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-content img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: #95a5a6;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: #2c3e50;
+}
+
+/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
+@media (max-width: 992px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/*Felipe Yuji*/
+.materiaiseacabamentos {
+    text-align: center;
+    /*mantêm o título e frase centralizado*/
+}
+
+.tiposdemadeira, .acabamentosdisponiveis {
+    margin: 25px auto;
+    width: 50%;
+    /*configurações para ONDE as bordas devem estar*/
+    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, não nenhuma modif*/
+}
+
+.acabamentosdisponiveisTABLE, .tiposdemadeiraTABLE {
+    border-spacing: 9px;
+    /*espaço entre os elementos, tive que dar esse nome para o TABLE*/
+}
+
+#madeira, #acabamentos {
+   font-size: 120%;
+   /*tamanho da fonte do subtítulo*/
+}
+
+.carvalho, .cedro, .mogno, .pinus, .natural, .vernizfoco, .vernizbrilhante, .encerado, .laca, .tingimento{
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 9px;
+    /* configurações específicas para as bordas*/
+    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
+}
+
+.carvalho {background-color: #fff3d1; }
+.cedro {background-color: #ffe4e1;}
+.pinus {background-color: #fffbd1;}
+.mogno {background-color: #ffe3c2;}
+/*^ cores de cada madeira*/
+
+.acabamentosdisponiveis {
+    text-align: center;
+    vertical-align: middle;
+    max-width: 50%;
+    /*põe o contéudo no meio da aba. Ex: Natural*/
+}
+
+.imagensdasmadeiras {
+    width: 22%;
+    border-radius: 10px;
+    /*configurações para a imagem*/
+}
+
+.imagensdasmadeiras, .tiposdemadeira {
+    display: flex;
+    justify-content: center;
+    /*configurações para manter ambas divs na mesma linha*/
+}
+
+.finalOne 
+{
+    padding: 70px 0px;
+}
+
+.caixafinal 
+{
+    margin: 0px 158px;
+    padding: 0px 14px;
+}
+
+.primerTextoFooter 
+{
+    background-color: blue;
+    text-align: center;
+    
+}
+
+.primerTextoFooter h2
+{
+    font-size: 31.5px;
+}
+
+.primerTextoFooter p
+{
+    font-size: 17.5px;
+}
+
+.finalOne 
+{
+    background-color: red;
 }
