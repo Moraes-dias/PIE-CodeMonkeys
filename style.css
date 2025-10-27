@@ -140,7 +140,6 @@ span
 }
 
 /* --- SEÇÃO DE PRODUTOS --- */
-/* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
     max-width: 1200px;
     text-align: center;
@@ -186,7 +185,6 @@ span
     transition: transform 0.4s ease;
 }
 
-/* Efeito de zoom na imagem ao passar o mouse */
 .product-card:hover .product-card__image-wrapper img {
     transform: scale(1.08);
 }
@@ -213,7 +211,7 @@ span
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: none; /* Começa escondido */
+    display: none; 
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -221,7 +219,6 @@ span
     transition: opacity 0.3s ease;
 }
 
-/* Classe que o JavaScript adiciona para mostrar o modal */
 .modal-overlay.visible {
     display: flex;
     opacity: 1;
@@ -281,34 +278,27 @@ span
 
 
 /*Felipe Yuji*/
-
 .minhaParteYuji
 {
     padding: 30px 0px;
     background-color:#fdf7e8;
-    /*adicionado cor de fundo */
 }
 
 .materiaiseacabamentos {
     text-align: center;
-    /*mantêm o título e frase centralizado*/
 }
 
 .tiposdemadeira, .acabamentosdisponiveis {
     margin: 25px auto;
     width: 50%;
-    /*configurações para ONDE as bordas devem estar*/
-    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, não nenhuma modif*/
 }
 
 .acabamentosdisponiveisTABLE, .tiposdemadeiraTABLE {
     border-spacing: 9px;
-    /*espaço entre os elementos, tive que dar esse nome para o TABLE*/
 }
 
 #madeira, #acabamentos {
    font-size: 120%;
-   /*tamanho da fonte do subtítulo*/
 }
 
 .modelomadeira, .acabamento {
@@ -316,40 +306,33 @@ span
     border-radius: 10px;
     padding: 9px;
     box-shadow: 1px 1px 1px lightgray;
-    /* configurações específicas para as bordas*/
-    /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
 }
 
 .acabamento {
     background: white;
-    /*tive que separar essa class por conta do "background-color" do section "minhaParteYuji"*/
 } 
 
 #carvalho {background-color: #fff3d1; }
 #cedro {background-color: #ffe4e1;}
 #pinus {background-color: #fffbd1;}
 #mogno {background-color: #ffe3c2;}
-/*^ cores de cada madeira*/
 
 .acabamentosdisponiveis {
     text-align: center;
     vertical-align: middle;
     max-width: 50%;
-    /*põe o contéudo no meio da aba. Ex: Natural*/
 }
 
 .imagensdasmadeiras {
     width: 30%;
     height: 18%;
     border-radius: 10px;
-    /*configurações para a imagem*/
 }
 
 .imagensdasmadeiras, .tiposdemadeira {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /*configurações para manter ambas divs na mesma linha*/
 }
 
 .finalOne 
@@ -394,40 +377,39 @@ span
     margin: 0px 84px;
 }
 
-.botaoWhats 
+/* --- ESTILOS DOS BOTÕES DE WHATSAPP E INSTAGRAM (RESTURADO) --- */
+.botaoWhats, .botaoInta
 {
     padding: 21px 28px;
     height: 142.5px;
     width: 280px;
     border: none;
     border-radius: 15px;
-    background-color: #FDB813;
+    background-color: #FDB813; /* Cor amarela original */
     cursor: pointer;
-    
+    display: flex; /* Para alinhar o conteúdo interno */
+    flex-direction: column; /* Organiza a imagem e o texto em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    text-decoration: none; /* Garante que links não tenham sublinhado */
+    color: inherit; /* Garante que a cor do texto seja a padrão ou herdada */
 }
 
-.botaoInta
-{
-    padding: 21px 28px;
-    height: 142.5px;
-    width: 280px;
-    border: none;
-    border-radius: 15px;
-    background-color: #FDB813;
-        cursor: pointer;
+/* Ajustes para o texto dentro dos botões (agora visíveis) */
+.botaoWhats h3, .botaoWhats p,
+.botaoInta h3, .botaoInta p {
+    display: block; /* Garante que o texto seja exibido */
+    margin: 5px 0 0 0; /* Pequena margem acima do texto, ajuste conforme necessário */
+    color: #000000; /* Defini a cor do texto para preto, pois antes estava branco */
 }
 
-.imgWhats
-{
-    height: 48px;
-    width: 48px;
-}
-
-.instaImg 
+/* Tamanho das imagens dos ícones (mantendo o tamanho original do seu CSS) */
+.imgWhats, .instaImg 
 {
     height: 48px;
     width: 48px;
 }
+
 
 .ultimoText 
 {
@@ -465,7 +447,6 @@ span
 .coluna3
 {
     padding-left: 30%;
-    /*configuração para onde deve estar a 3 coluna*/
 }
 
 .direitos 
