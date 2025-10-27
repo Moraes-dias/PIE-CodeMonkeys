@@ -121,6 +121,7 @@ span
 
 .botoes button 
 {
+    cursor: pointer;
     padding: 10.5px 28px;
     border-radius: 10px;
 }
@@ -168,13 +169,14 @@ span
 /* --- ESTILO INDIVIDUAL DO CARD --- */
 .product-card {
     text-align: left;
-    cursor: pointer; /* Indica que o card é clicável */
+    
 }
 
 .product-card__image-wrapper {
     overflow: hidden;
     border-radius: 12px;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .product-card__image-wrapper img {
@@ -250,8 +252,8 @@ span
 
 .modal-close {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 1px;
+    right: 5px;
     background: none;
     border: none;
     font-size: 2.5rem;
@@ -279,6 +281,14 @@ span
 
 
 /*Felipe Yuji*/
+
+.minhaParteYuji
+{
+    padding: 30px 0px;
+    background-color:#fdf7e8;
+    /*adicionado cor de fundo */
+}
+
 .materiaiseacabamentos {
     text-align: center;
     /*mantêm o título e frase centralizado*/
@@ -302,13 +312,18 @@ span
 }
 
 .modelomadeira, .acabamento {
-    border: 1px solid #eee;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 9px;
     box-shadow: 1px 1px 1px lightgray;
     /* configurações específicas para as bordas*/
     /* peguei essa parte do GPT porquê é específica demais pra perde tempo, fiz umas modificações*/
 }
+
+.acabamento {
+    background: white;
+    /*tive que separar essa class por conta do "background-color" do section "minhaParteYuji"*/
+} 
 
 #carvalho {background-color: #fff3d1; }
 #cedro {background-color: #ffe4e1;}
@@ -324,8 +339,8 @@ span
 }
 
 .imagensdasmadeiras {
-    width: 22%;
-    height: 15%;
+    width: 30%;
+    height: 18%;
     border-radius: 10px;
     /*configurações para a imagem*/
 }
@@ -335,4 +350,119 @@ span
     justify-content: center;
     align-items: flex-end;
     /*configurações para manter ambas divs na mesma linha*/
+}
+
+.finalOne 
+{
+    background-color: #000000;
+}
+
+.caixafinal 
+{
+    margin: 0px 435px;
+    padding: 0px 14px;
+}
+
+.primerTextoFooter 
+{
+    text-align: center;
+    margin: 0px 0px 42px;
+}
+
+.primerTextoFooter h2
+{
+    color: #ffffff;
+    font-size: 31.5px;
+    margin: 0px 0px 21px;
+}
+
+.primerTextoFooter p
+{
+    color: #ffffff;
+    font-size: 17.5px;
+}
+
+.botoesfooter
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0px 84px;
+}
+
+.botaoWhats 
+{
+    padding: 21px 28px;
+    height: 142.5px;
+    width: 280px;
+    border: none;
+    border-radius: 15px;
+    background-color: #FDB813;
+}
+
+.botaoInta
+{
+    padding: 21px 28px;
+    height: 142.5px;
+    width: 280px;
+    border: none;
+    border-radius: 15px;
+    background-color: #FDB813;
+}
+
+.imgWhats
+{
+    height: 48px;
+    width: 48px;
+}
+
+.instaImg 
+{
+    height: 48px;
+    width: 48px;
+}
+
+.ultimoText 
+{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    color: #b5b5b5;
+}
+
+.finalTwo 
+{
+    padding: 42px 0px;
+    color: #ffffff;
+    background-color: #15172b;
+}
+
+.colunasEfilasTABLE
+{
+    border-bottom: 1px solid rgb(102, 99, 137);
+    justify-self: center;
+    border-spacing: 9px;
+    width: 70%;
+}
+
+.table1
+{
+    text-align: left;
+}
+
+.coluna2 
+{
+    padding-right: 20%;
+}
+
+.coluna3
+{
+    padding-left: 30%;
+    /*configuração para onde deve estar a 3 coluna*/
+}
+
+.direitos 
+{
+    text-align: center;
+    color: rgb(180, 181, 183);
 }
