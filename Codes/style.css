@@ -378,7 +378,7 @@ span
 }
 
 /* --- ESTILOS DOS BOTÕES DE WHATSAPP E INSTAGRAM (RESTURADO) --- */
-.botaoWhats, .botaoInta
+.botoeRedes
 {
     padding: 21px 28px;
     height: 142.5px;
@@ -404,7 +404,7 @@ span
 }
 
 /* Tamanho das imagens dos ícones (mantendo o tamanho original do seu CSS) */
-.imgWhats, .instaImg 
+.imgRedes
 {
     height: 48px;
     width: 48px;
