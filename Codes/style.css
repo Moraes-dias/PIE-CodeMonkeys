@@ -9,7 +9,7 @@ body {/* --- ESTILOS GERAIS --- */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #ffffff;
     margin: 0;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -20,15 +20,15 @@ body {/* --- ESTILOS GERAIS --- */
     align-items: center;
     height: 56px;
     min-height: fit-content;
-    min-width: fit-content;
 }
 
-.logoBar img
+/*fazer @media*/
+/*.logoBar img
 {
     height: 56px;
     margin: 10px;
     margin-right: 10px;
-}
+}*/
 
 .textobar
 {
@@ -47,7 +47,6 @@ body {/* --- ESTILOS GERAIS --- */
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding-right: 20%;
     gap: 20px;
 }
 
@@ -374,7 +373,7 @@ span
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 0px 84px;
+    margin: 0px;
 }
 
 /* --- ESTILOS DOS BOTÕES DE WHATSAPP E INSTAGRAM (RESTURADO) --- */
@@ -454,3 +453,8 @@ span
     text-align: center;
     color: rgb(180, 181, 183);
 }
+/*
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}*/
