@@ -22,13 +22,13 @@ body {/* --- ESTILOS GERAIS --- */
     min-height: fit-content;
 }
 
-/*fazer @media*/
-/*.logoBar img
+
+.logoBar img
 {
     height: 56px;
     margin: 10px;
     margin-right: 10px;
-}*/
+}
 
 .textobar
 {
@@ -453,8 +453,8 @@ span
     text-align: center;
     color: rgb(180, 181, 183);
 }
-/*
+
 html, body {
   width: 100%;
   overflow-x: hidden;
-}*/
+}
