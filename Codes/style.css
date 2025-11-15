@@ -277,61 +277,110 @@ span
 
 
 /*Felipe Yuji*/
-.minhaParteYuji
-{
-    padding: 30px 0px;
-    background-color:#fdf7e8;
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+.opcoesDeMadeira {
+    font-family: Helvetica, sans-serif;
+    /* Removido height/width: 100vh/100vw para o conteúdo fluir */
+    padding: 90px;
+    box-sizing: border-box; 
+    background-color: #f5e9d3;
 }
 
-.materiaiseacabamentos {
+.materiaiseAcabamentos {
     text-align: center;
+    margin-bottom: 90px;
 }
 
-.tiposdemadeira, .acabamentosdisponiveis {
-    margin: 25px auto;
-    width: 50%;
-}
-
-.acabamentosdisponiveisTABLE, .tiposdemadeiraTABLE {
-    border-spacing: 9px;
-}
-
-#madeira, #acabamentos {
+#tituloTiposDeMadeira, #tituloAcabamentosDisponiveis {
    font-size: 120%;
+   margin-bottom: 15px; /* Adiciona espaço abaixo dos títulos "Tipos de Madeira" */
 }
 
-.modelomadeira, .acabamento {
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    padding: 9px;
-    box-shadow: 1px 1px 1px lightgray;
+/* ===== 1. LAYOUT PRINCIPAL (Flexbox Lado a Lado) ===== */
+.conteudoPrincipal {
+    display: flex;
+    justify-content: center; /* Centraliza as duas colunas */
+    align-items: flex-start; /* Alinha o topo das colunas */
+    gap: 50px; /* Espaço entre a coluna de texto e a imagem */
+    
+    /* Para garantir que funcione, definimos uma largura máxima */
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza o .conteudoPrincipal na página */
 }
+
+/* Coluna da Esquerda (Texto) */
+.colunaEsquerda {
+    /* flex: 1; permite que esta coluna cresça */
+    flex: 1; 
+    max-width: 600px; /* Limita a largura para o layout não quebrar */
+}
+
+/* Coluna da Direita (Imagem) */
+.imagensDasMadeiras {
+    width: 350px; /* Tamanho fixo para a imagem */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    /* flex-shrink: 0; impede a imagem de encolher */
+    flex-shrink: 0; 
+    margin-top: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* ===== 2. LAYOUT DAS FILEIRAS (Flex-Wrap) ===== */
+.itensContainer {
+    display: flex;
+    flex-wrap: wrap; /* ESSENCIAL: Permite que os itens quebrem a linha */
+    gap: 10px; /* Espaço entre todos os itens */
+}
+
+/* ===== 3. ITENS (Madeiras e Acabamentos) ===== */
+
+/* --- Tipos de Madeira (2 colunas) --- */
+.tiposDeMadeira {
+    margin-bottom: 30px; /* Espaço entre a seção de madeiras e a de acabamentos */
+}
+
+.modeloMadeira {
+    flex-basis: calc(50% - 5px); 
+    box-sizing: border-box; /* Garante que padding/border não afetem o cálculo */
+    
+    /* Estilos dos cartões */
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px 9px;
+    box-shadow: 1px 1px lightgray;
+    cursor: pointer;
+}
+
+/* Cores das madeiras */
+#carvalho {background-color: #f0e9aa;}
+#cedro {background-color: #f1ceb5;}
+#pinus {background-color: #fffbd1;}
+#mogno {background-color: #f1a57f;}
+
 
 .acabamento {
-    background: white;
-} 
-
-#carvalho {background-color: #fff3d1; }
-#cedro {background-color: #ffe4e1;}
-#pinus {background-color: #fffbd1;}
-#mogno {background-color: #ffe3c2;}
-
-.acabamentosdisponiveis {
-    text-align: center;
-    vertical-align: middle;
-    max-width: 50%;
-}
-
-.imagensdasmadeiras {
-    width: 30%;
-    height: 18%;
+    box-sizing: border-box;
+    border: 1px solid #eee;
     border-radius: 10px;
+    padding: 12px 9px;
+    box-shadow: 1px 1px 1px lightgray;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    background-color: #ffffff;
 }
 
-.imagensdasmadeiras, .tiposdemadeira {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+.acabamentosDisponiveis .itensContainer {
+    display: grid;
+    /* Define 3 colunas de largura igual (1fr 1fr 1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+
+    /* Desativa o 'flex-wrap' que estava vindo do .itensContainer genérico */
+    flex-wrap: unset; 
 }
 
 .finalOne 
