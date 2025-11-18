@@ -11,7 +11,10 @@ body {/* --- ESTILOS GERAIS --- */
     margin: 0;
     justify-content: start;
     align-items: center;
+    background: linear-gradient(to bottom, #F4B000 1%, #f0e0aa 30%,#f0e9aa 50%, #f5e9d3 100%);
 }
+
+
 
 .navBar, .telasPequenas
 {
@@ -47,7 +50,7 @@ body {/* --- ESTILOS GERAIS --- */
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     gap: 20px;
 }
 
@@ -99,7 +102,7 @@ span
 .imagem img
 {
     height: 80%;
-    width: 80%;
+    width: 90%;
     box-sizing: border-box;
     border-radius: 15px;
 }
@@ -190,12 +193,17 @@ span
 
     .imagem img
     {
-        width: 80%;
+        width: 90%;
     }
-
-    
-
 }   
+
+@media(max-width: 500px) 
+{
+    .imagem img
+    {
+        width: 100%;
+    }
+}
 
 /* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
