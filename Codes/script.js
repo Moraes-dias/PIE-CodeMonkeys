@@ -123,3 +123,64 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 }); // <-- FIM DO DOMContentLoaded. Todo o código do modal está aqui dentro.
+
+// ==========================================================
+// PARTE 3: CÓDIGO - HOVER DAS IMAGENS (Com Fade e sem reverter)
+// ==========================================================
+
+const imagemPrincipal = document.querySelector('.imagensDasMadeiras');
+const todosBotoes = document.querySelectorAll('.modeloMadeira, .acabamento');
+
+// Verifica se a imagem principal existe na página
+if (imagemPrincipal) {
+
+    // A variável 'imagemPadrao' não é mais necessária,
+    // pois a imagem não vai mais reverter.
+
+    // Mapa de imagens com o caminho CORRETO (../)
+    const mapaImagens = {
+        'carvalho': '../Img/carvalho.jpg',
+        'cedro': '../Img/cedro.png',
+        'pinus': '../Img/pinus.jpg',
+        'mogno': '../Img/mogno.jpg',
+        'natural': '../Img/natural.avif',
+        'vernizfosco': '../Img/vernizfosco.avif',
+        'vernizbrilhante': '../Img/vernizbrilhante.avif',
+        'encerado': '../Img/encerado.avif',
+        'laca': '../Img/lacabranca.avif',
+        'tingimento': '../Img/tingimentoescuro.avif'
+    };
+
+    // Variável para guardar qual imagem está selecionada
+    let imagemAtual = imagemPrincipal.src;
+
+    todosBotoes.forEach(botao => {
+        
+        // Evento para QUANDO O MOUSE ENTRA no botão
+        botao.addEventListener('mouseenter', () => {
+            const idDoBotao = botao.id;
+            const novoSrc = mapaImagens[idDoBotao];
+
+            // Só executa a troca se a imagem for DIFERENTE da que já está lá
+            if (novoSrc && imagemAtual !== novoSrc) {
+                
+                // Guarda a nova imagem como "imagem atual"
+                imagemAtual = novoSrc;
+
+                // 1. Inicia o fade-out
+                imagemPrincipal.style.opacity = '0';
+
+                // 2. Espera a animação de fade-out terminar (300ms)
+                setTimeout(() => {
+                    // 3. Troca a imagem (enquanto ela está invisível)
+                    imagemPrincipal.src = novoSrc;
+                    
+                    // 4. Inicia o fade-in
+                    imagemPrincipal.style.opacity = '1';
+                }, 300); // Este tempo (300ms) DEVE ser igual ao do CSS
+            }
+        });
+
+        // O evento 'mouseleave' FOI REMOVIDO.
+    });
+}
