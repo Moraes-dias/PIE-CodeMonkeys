@@ -83,7 +83,7 @@ span
 
 .primerTexto 
 {
-    margin-top: 70px;
+    margin-top: 120px;
     
 }
 
@@ -176,6 +176,12 @@ span
         align-items: center;
     }
 
+    .primerTexto 
+    {
+        margin-top: 70px;
+        
+    }
+
     span 
     {
         display: flex;
@@ -210,11 +216,31 @@ span
 /* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
     max-width: 1200px;
+    display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 60px;
+    margin: 60px 30rem;
 }
+
+@media(max-width: 1700px)
+{
+    .produtos-section
+    {
+        margin: 60px 15rem ; 
+    }
+
+}
+
+@media(max-width: 1400px)
+{
+    .produtos-section
+    {
+        margin: 60px; 
+    }
+
+}
+
 
 .produtos-section .section-title {
     font-size: 2rem;
