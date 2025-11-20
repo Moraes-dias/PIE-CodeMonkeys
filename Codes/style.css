@@ -147,6 +147,7 @@ span
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2px;
     }
 
     .telasPequenas h2
@@ -162,6 +163,7 @@ span
     .linkBar 
     {
         justify-content: center;
+        margin-bottom: 2px;
     }
 
     .inicio 
@@ -190,7 +192,7 @@ span
 
     .imagem img
     {
-        width: 80%;
+        width: 100%;
     }
 
     
@@ -201,7 +203,9 @@ span
 .produtos-section {
     max-width: 1200px;
     text-align: center;
-    margin: 60px 15rem;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
 }
 
 .produtos-section .section-title {
