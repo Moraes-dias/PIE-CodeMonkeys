@@ -36,7 +36,11 @@
             <p>Criamos móveis únicos para sua cozinha, escritório e casa. <br> Cada peça é feita sob medida com madeiras selecionadas e <br> acabamentos de qualidade superior.</p>
 
             <div class="botoes">
-            <button id="botonEsquerda">Solicitar Orçamento</button>
+
+            <a href="https://wa.me/554591417083">
+                <button id="botonEsquerda">Solicitar Orçamento</button>
+            </a>
+
             <button id="botonDireita"><span>Ver Produtos</span></button>
             </div>
         </div>
@@ -121,11 +125,11 @@
         </div>
     </div>
 
-<section class="opcoesDeMadeira">
+<section class="opcoesDeMadeira" id="materiais">
     
     <div class="materiaiseAcabamentos">
-        <h2><b>Materiais & Acabamentos</b></h2>
-        <p> Trabalhamos com madeiras selecionadas e diversos acabamentos</p>
+        <h1 id="tituloMateriaisEAcabamentos">Materiais & Acabamentos</h1>
+        <p id="subtituloDeMaterialEAcabamento"> Trabalhamos com madeiras selecionadas e diversos acabamentos</p>
     </div>
     
     <div class="conteudoPrincipal">
@@ -135,7 +139,7 @@
             <section class="tiposDeMadeira">
                 <h3 id="tituloTiposDeMadeira">Tipos de Madeira</h3>
 
-                <div class="itensContainer">
+                <div class="itensContainer" class="navigation"> <!-- Classe "navigation" adicionado para pôr efeito hover extra -->
 
                     <div id="carvalho" class="modeloMadeira">
                         <h4>Carvalho</h4>
@@ -199,22 +203,22 @@
 </section>
 
 
-<footer><!--Este footer contém informações da empresa como parceiros, localização, whatsapp e instagram da mesma-->
+<footer id="contato">
     <section class="finalOne">
         <div class="caixafinal">
-        <div class="primerTextoFooter">
+            <div class="primerTextoFooter">
                 <h2>Entre em Contato</h2>
                 <p>Fale conosco através dos nossos canais digitais</p>
             </div>
 
             <div class="botoesfooter">
                 <a href="https://wa.me/554591417083" target="_blank" class="botoeRedes">
-                    <img class="imgRedes" src="/Img/whatsImg.png" alt="Não foi possivel carregar a imagem">
+                    <img class="imgRedes" src="/Img/whatsImg.png" alt="WhatsApp">
                     <h3>WhatsApp</h3>
                     <p>+55 45 9141-7083</p>
                 </a>
                 <a href="https://www.instagram.com/inovemoveisplanejados2025/" target="_blank" class="botoeRedes">
-                    <img class="imgRedes" src="/Img/instaFot.png" alt="Não foi possivel carregar a imagem">
+                    <img class="imgRedes" src="/Img/instaFot.png" alt="Instagram">
                     <h3>Instagram</h3>
                     <p>@inovemoveisplanejados2025</p>
                 </a>
@@ -226,66 +230,31 @@
         </div>
     </section>
 
-    <section class="finalTwo">
+    <section class="novo-footer-azul">
+        <div class="container-footer">
+            
+            <div class="coluna-info">
+                <h4>MadeiraCraft</h4>
+                <p>Móveis personalizados em madeira para sua casa e escritório. Qualidade, durabilidade e design exclusivo.</p>
+            </div>
 
-        <table class="colunasEfilasTABLE"> <tr class="table1">
-            <th>
-                <h4 class="coluna1">MadeiraCraft</h4>
-            </th>
+            <div class="coluna-info">
+                <h4>Nossos Produtos</h4>
+                <p>Cozinhas Planejadas</p>
+                <p>Móveis para Escritório</p>
+                <p>Mesas para Computador</p>
+                <p>Móveis Modernos</p>
+            </div>
 
-            <th>
-                <h4 class="coluna2">Nossos Produtos</h4>
-            </th>
+            <div class="coluna-info">
+                <h4>Contato</h4>
+                <p>(11) 99999-9999</p>
+                <p>contato@madeiracraft.com.br</p>
+                <p>São Paulo, SP - Brasil</p>
+            </div>
+        </div>
 
-            <th>
-                <h4 class="coluna3">Contato</h4>
-            </th>
-        </tr>
-
-        <tr class="table2">
-            <td>
-                <p class="coluna1">Móveis personalizados em madeira para sua casa</p>
-            </td>
-            <td>
-                <p class="coluna2">Cozinhas Planejadas</p>
-            </td>
-            <td>
-                <p class="coluna3">(11) 99999-9999</p>
-            </td>
-        </tr>
-
-        <tr class="table3">
-            <td>
-                <p class="coluna1">e escritório. Qualidade, durabilidade e design</p>
-            </td>
-            <td>
-                <p class="coluna2">Móveis para Escritório</p>
-            </td>
-            <td>
-                <p class="coluna3">contato@madeiracraft.com.br</p>
-            </td>
-        </tr>
-
-        <tr class="table4">
-            <td>
-                <p class="coluna1">exclusivo.</p>
-            </td>
-            <td>
-                <p class="coluna2">Mesas para Computador</p>
-            </td>
-            <td>
-                <p class="coluna3">São Paulo, SP - Brasil</p>
-            </td>
-        </tr>
-
-        <tr class="table5">
-            <td> </td> <td>
-                <p class="coluna2">Móveis Modernos</p>
-            </td>
-        </tr>
-        </table>
-
-        <br>
+        <div class="linha-divisoria"></div>
         <p class="direitos">&copy; 2025 MadeiraCraft. Todos os direitos reservados.</p>
     </section>
 </footer>

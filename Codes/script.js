@@ -42,6 +42,8 @@ function scrollPara(id, duracao = 800) {
     requestAnimationFrame(animarScroll);
 }
 
+
+
 //cria uma const que tera todos os id para conseguir mapear
 //dentro do conteudo tem as chaves e o value com o nome de cada
 const mapScroll = {
