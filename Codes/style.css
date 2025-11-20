@@ -11,7 +11,10 @@ body {/* --- ESTILOS GERAIS --- */
     margin: 0;
     justify-content: start;
     align-items: center;
+    background: linear-gradient(to bottom, #F4B000 1%, #f0e0aa 30%,#f0e9aa 50%, #f5e9d3 100%);
 }
+
+
 
 .navBar, .telasPequenas
 {
@@ -47,7 +50,7 @@ body {/* --- ESTILOS GERAIS --- */
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     gap: 20px;
 }
 
@@ -80,7 +83,7 @@ span
 
 .primerTexto 
 {
-    margin-top: 70px;
+    margin-top: 120px;
     
 }
 
@@ -99,7 +102,7 @@ span
 .imagem img
 {
     height: 80%;
-    width: 80%;
+    width: 90%;
     box-sizing: border-box;
     border-radius: 15px;
 }
@@ -147,6 +150,7 @@ span
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2px;
     }
 
     .telasPequenas h2
@@ -162,6 +166,7 @@ span
     .linkBar 
     {
         justify-content: center;
+        margin-bottom: 2px;
     }
 
     .inicio 
@@ -169,6 +174,12 @@ span
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .primerTexto 
+    {
+        margin-top: 70px;
+        
     }
 
     span 
@@ -190,19 +201,46 @@ span
 
     .imagem img
     {
-        width: 80%;
+        width: 100%;
     }
-
-    
-
 }   
+
+@media(max-width: 500px) 
+{
+    .imagem img
+    {
+        width: 100%;
+    }
+}
 
 /* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
     max-width: 1200px;
+    display: block;
     text-align: center;
-    margin: 60px 15rem;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 30rem;
 }
+
+@media(max-width: 1700px)
+{
+    .produtos-section
+    {
+        margin: 60px 15rem ; 
+    }
+
+}
+
+@media(max-width: 1400px)
+{
+    .produtos-section
+    {
+        margin: 60px; 
+    }
+
+}
+
 
 .produtos-section .section-title {
     font-size: 2rem;
