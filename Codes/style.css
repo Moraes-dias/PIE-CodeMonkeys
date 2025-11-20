@@ -276,111 +276,200 @@ span
 }
 
 
-/*Felipe Yuji*/
-/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+/* ESTILOS ESPECÍFICOS: MATERIAIS E FOOTER   */
+/* --- Ajustes Gerais da Seção Materiais --- */
+
+#tituloTiposDeMadeira, #tituloAcabamentosDisponiveis, #tituloMateriaisEAcabamentos{
+    padding-bottom: 15px;
+}
+
+#subtituloDeMaterialEAcabamento{
+    font-size: larger;
+}
+
 .opcoesDeMadeira {
-    font-family: Helvetica, sans-serif;
-    /* Removido height/width: 100vh/100vw para o conteúdo fluir */
-    padding: 90px;
-    box-sizing: border-box; 
-    background-color: #f5e9d3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
+    padding: 90px 20px; /* Padding ajustado */
+    background-color: #faf8ee;
+    box-sizing: border-box;
 }
 
 .materiaiseAcabamentos {
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
 }
 
-#tituloTiposDeMadeira, #tituloAcabamentosDisponiveis {
-   font-size: 120%;
-   margin-bottom: 15px; /* Adiciona espaço abaixo dos títulos "Tipos de Madeira" */
-}
-
-/* ===== 1. LAYOUT PRINCIPAL (Flexbox Lado a Lado) ===== */
 .conteudoPrincipal {
     display: flex;
-    justify-content: center; /* Centraliza as duas colunas */
-    align-items: flex-start; /* Alinha o topo das colunas */
-    gap: 50px; /* Espaço entre a coluna de texto e a imagem */
-    
-    /* Para garantir que funcione, definimos uma largura máxima */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
     max-width: 1100px;
-    margin: 0 auto; /* Centraliza o .conteudoPrincipal na página */
+    margin: 0 auto;
 }
 
-/* Coluna da Esquerda (Texto) */
 .colunaEsquerda {
-    /* flex: 1; permite que esta coluna cresça */
-    flex: 1; 
-    max-width: 600px; /* Limita a largura para o layout não quebrar */
+    flex: 1;
+    max-width: 600px;
 }
 
-/* Coluna da Direita (Imagem) */
-.imagensDasMadeiras {
-    width: 350px; /* Tamanho fixo para a imagem */
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-    /* flex-shrink: 0; impede a imagem de encolher */
-    flex-shrink: 0; 
-    margin-top: 20px;
-    transition: opacity 0.3s ease-in-out;
-}
-
-
-/* ===== 2. LAYOUT DAS FILEIRAS (Flex-Wrap) ===== */
 .itensContainer {
     display: flex;
-    flex-wrap: wrap; /* ESSENCIAL: Permite que os itens quebrem a linha */
-    gap: 10px; /* Espaço entre todos os itens */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
-/* ===== 3. ITENS (Madeiras e Acabamentos) ===== */
-
-/* --- Tipos de Madeira (2 colunas) --- */
-.tiposDeMadeira {
-    margin-bottom: 30px; /* Espaço entre a seção de madeiras e a de acabamentos */
-}
-
-.modeloMadeira {
-    flex-basis: calc(50% - 5px); 
-    box-sizing: border-box; /* Garante que padding/border não afetem o cálculo */
-    
-    /* Estilos dos cartões */
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 15px 9px;
-    box-shadow: 1px 1px lightgray;
-    cursor: pointer;
-}
-
-/* Cores das madeiras */
-#carvalho {background-color: #f0e9aa;}
-#cedro {background-color: #f1ceb5;}
-#pinus {background-color: #fffbd1;}
-#mogno {background-color: #f1a57f;}
-
-
-.acabamento {
+.modeloMadeira, .acabamento {
+    flex-basis: calc(50% - 5px);
     box-sizing: border-box;
     border: 1px solid #eee;
     border-radius: 10px;
-    padding: 12px 9px;
-    box-shadow: 1px 1px 1px lightgray;
+    padding: 15px;
+    background-color: #fff; /* Adicionei fundo branco padrão se nao tiver ID */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     cursor: pointer;
-    text-align: center;
-    color: #000;
-    background-color: #ffffff;
 }
+
+/* Cores Específicas */
+#carvalho { background-color: #f5f0b4; }
+#cedro { background-color: #f1ceb5; }
+#pinus { background-color: #fffbd1; }
+#mogno { background-color: #f1a57f; }
+
+
 
 .acabamentosDisponiveis .itensContainer {
     display: grid;
-    /* Define 3 colunas de largura igual (1fr 1fr 1fr) */
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas no PC */
     gap: 10px;
+}
 
-    /* Desativa o 'flex-wrap' que estava vindo do .itensContainer genérico */
-    flex-wrap: unset; 
+.acabamento {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    color: #000000;
+}
+
+.acabamento:hover {
+    border: 1px solid #d9cbb1;
+    border-radius: 10px;
+    padding: 12px;
+    background-color: #f0eeee;
+    text-align: center;
+    cursor: pointer;
+    transform-origin: left;
+}
+
+.imagensDasMadeiras {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* --- Estilos do Novo Footer (Grid em vez de Tabela) --- */
+.finalTwo {
+    padding: 50px 20px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.direitos {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/*RESPONSIVIDADE (MEDIA QUERIES)*/
+@media (max-width: 900px) {
+    /* Materiais: Imagem vai para baixo do texto */
+    .conteudoPrincipal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .colunaEsquerda {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .imagensDasMadeiras {
+        width: 100%;
+        max-width: 400px; /* Limita tamanho no tablet */
+        height: auto;
+        aspect-ratio: 1/1;
+        margin-top: 20px;
+    }
+    
+    /* Footer: Vira 2 colunas em vez de 3 */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Materiais: Itens ficam em 1 coluna ou 2 menores */
+    .opcoesDeMadeira {
+        padding: 40px 20px;
+    }
+
+    .modeloMadeira {
+        flex-basis: 100%; /* 1 por linha no celular */
+    }
+
+    .acabamentosDisponiveis .itensContainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+    }
+
+    /* Footer: Tudo empilhado (1 coluna) */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    /* Ajuste dos botões de redes sociais */
+    .botoesfooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoeRedes {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .finalOne 
@@ -506,4 +595,247 @@ span
 html, body {
   width: 100%;
   overflow-x: hidden;
+}
+
+
+/* PARTE PRETA (CONTATO WHATSAPP E INSTAGRAM) - responsividade corrigida*/
+.finalOne {
+    background-color: #000000;
+    height: auto; 
+    min-height: fit-content;
+    padding: 60px 20px; /* Adicionamos padding para dar espaço em cima e embaixo */
+    color: white;
+    text-align: center;
+}
+
+.caixafinal {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.primerTextoFooter h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Container dos botões (WhatsApp/Insta) */
+.botoesfooter {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0; /* Espaço entre o texto de cima e o de baixo */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha se não couberem */
+}
+
+/* Estilo dos Botões Amarelos */
+.botoeRedes {
+    background-color: #FDB813;
+    color: #1C1C1C; /* Texto preto para contraste */
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px; /* Largura fixa no PC */
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+    box-sizing: border-box; /* Garante que o texto dentro do botão não quebre layout */
+}
+
+.botoeRedes:hover {
+    transform: scale(1.05);
+}
+
+.imgRedes {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+
+/* PARTE AZUL (INFORMAÇÕES) - CORRIGIDA */
+.novo-footer-azul {
+    background-color: #0b0c15;
+    padding: 60px 20px 30px 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* No PC, alinhado à esquerda */
+}
+
+.coluna-info {
+    flex: 1;          /* Cria e pôe uma coluna só em cima da outra */
+    min-width: 200px;
+}
+
+.coluna-info h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.coluna-info p {
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.linha-divisoria {
+    height: 1px;
+    background-color: #2a2a2a;
+    margin: 40px auto 20px auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.direitos {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+
+
+/* RESPONSIVIDADE PARA CELULAR (IMPORTANTE)*/
+@media (max-width: 768px) {
+    
+    /* --- Ajustes da Parte Preta --- */
+    .finalOne {
+        padding: 40px 20px; /* Reduz um pouco o espaço */
+    }
+
+    .botoesfooter {
+        flex-direction: column; /* Empilha os botões */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .botoeRedes {
+        width: 100%; /* Botão ocupa a largura total disponível */
+        max-width: 320px; /* Mas não fica gigante */
+    }
+
+    /* --- Ajustes da Parte Azul --- */
+    .container-footer {
+        flex-direction: column; /* Empilha as colunas de texto */
+        gap: 40px;
+        text-align: center; /* Centraliza o texto no celular */
+    }
+
+    .coluna-info {
+        border-bottom: 1px solid #1f1f1f; /* Linha sutil separando seções */
+        padding-bottom: 20px;
+    }
+    
+    .coluna-info:last-child {
+        border-bottom: none;
+    }
+}
+
+/* RESPONSIVIDADE DO RODAPÉ (CELULAR) */
+@media (max-width: 768px) {
+    .footer-grid {
+        /* Muda para 1 coluna única */
+        grid-template-columns: 1fr; 
+        text-align: center; /* Centraliza o texto no celular */
+        gap: 30px;
+    }
+
+    .footer-col {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #222; /* Uma linha sutil separando as seções no celular */
+    }
+    
+    .footer-col:last-child {
+        border-bottom: none;
+    }
+}
+
+
+/* ESTILOS DO NOVO FOOTER (Sem Tabelas) */
+/* Fundo Azul Escuro (Igual da imagem) */
+.novo-footer-azul {
+    background-color: #0b0c15; /* Azul quase preto */
+    padding: 60px 20px 30px 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/* Container que segura as 3 colunas lado a lado */
+.container-footer {
+    display: flex;
+    justify-content: center; /* Centraliza o bloco */
+    gap: 80px; /* Espaço entre as colunas */
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Importante para responsividade */
+}
+
+/* Estilo de cada Coluna individual */
+.coluna-info {
+    flex: 1; /* Faz as colunas terem tamanho igual */
+    min-width: 250px; /* Tamanho mínimo para não espremer */
+}
+
+/* Títulos das colunas (MadeiraCraft, Nossos Produtos...) */
+.coluna-info h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Textos das colunas */
+.coluna-info p {
+    color: #dcdcdc;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Linha fina decorativa */
+.linha-divisoria {
+    height: 1px;
+    background-color: #333;
+    margin: 40px auto 20px auto;
+    max-width: 1100px;
+}
+
+.direitos {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+
+/*  responsividade do footer */
+@media (max-width: 850px) {
+    .container-footer {
+        flex-direction: column; /* Empilha um embaixo do outro */
+        gap: 40px;
+        text-align: center; /* Centraliza o texto no celular */
+    }
+
+    .coluna-info {
+        border-bottom: 1px solid #222; /* Linha separadora no celular */
+        padding-bottom: 20px;
+    }
+
+    .coluna-info:last-child {
+        border-bottom: none;
+    }
 }
