@@ -84,6 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDescription = document.getElementById('modalDescription');
 
     // 2. Funções para controlar o modal (sem alterações aqui, estavam perfeitas)
+
+    
     function openModal(card) {
         const title = card.dataset.title;
         const description = card.dataset.description;
