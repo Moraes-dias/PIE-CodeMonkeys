@@ -11,7 +11,7 @@ body {/* --- ESTILOS GERAIS --- */
     margin: 0;
     justify-content: start;
     align-items: center;
-    background: linear-gradient(to bottom, #F4B000 1%, #f0e0aa 30%,#f0e9aa 50%, #f5e9d3 100%);
+    background: linear-gradient(to bottom, #F4B000 10%, #f0e0aa 30%,#f3ecaf 50%, #f5e9d3 100%);
 }
 
 
@@ -57,7 +57,7 @@ body {/* --- ESTILOS GERAIS --- */
 .linkBar button
 {
     color: #F4B000;
-    font-size: 14px;
+    font-size: 24px;
     border: none;
     outline: none;
     background: none;
@@ -395,7 +395,6 @@ span
 .opcoesDeMadeira {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
     padding: 90px 20px; /* Padding ajustado */
-    background-color: #faf8ee;
     box-sizing: border-box;
 }
 
