@@ -1,41 +1,67 @@
-*
-{
+/*
+ * ============================================================
+ * 1. RESET BÁSICO E CONFIGURAÇÕES GERAIS
+ * ============================================================
+ */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {/* --- ESTILOS GERAIS --- */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #ffffff;
+    
+    /* Fundo Gradiente */
+    background: linear-gradient(to bottom, #F4B000 10%, #f0e0aa 30%, #f3ecaf 50%, #f5e9d3 100%);
+    background-color: #ffffff; /* Fallback */
+    
     margin: 0;
     justify-content: start;
     align-items: center;
-    background: linear-gradient(to bottom, #F4B000 10%, #f0e0aa 30%,#f3ecaf 50%, #f5e9d3 100%);
 }
 
+/*
+ * ============================================================
+ * 2. NAVBAR FIXA (STICKY HEADER)
+ * ============================================================
+ */
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%;
+}
 
-.navBar, .telasPequenas
-{
+header.scrolled {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navBar, .telasPequenas {
     display: flex;
     background-color: #1C1C1C;
     align-items: center;
     height: 56px;
     min-height: fit-content;
     width: 100%;
+    transition: background-color 0.3s ease-in-out;
 }
 
-
-.logoBar img
-{
+.logoBar img {
     height: 56px;
     margin: 10px;
     margin-right: 10px;
 }
 
-.textobar
-{
+.textobar {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -45,8 +71,7 @@ body {/* --- ESTILOS GERAIS --- */
     width: 20%;
 }
 
-.linkBar 
-{
+.linkBar {
     width: 100%;
     display: flex;
     align-items: center;
@@ -54,8 +79,7 @@ body {/* --- ESTILOS GERAIS --- */
     gap: 20px;
 }
 
-.linkBar button
-{
+.linkBar button {
     color: #F4B000;
     font-size: 24px;
     border: none;
@@ -65,13 +89,13 @@ body {/* --- ESTILOS GERAIS --- */
     cursor: pointer;
 }
 
-span 
-{
-    color: #793300;
-}
+/*
+ * ============================================================
+ * 3. SEÇÃO HERO (INÍCIO)
+ * ============================================================
+ */
 
-.inicio
-{
+.inicio {
     margin: 0px 46px;
     font-size: 17.5px;
     display: flex;
@@ -81,153 +105,71 @@ span
     padding: 56px 14px;
 }
 
-.primerTexto 
-{
+.primerTexto {
     margin-top: 220px;
-    
 }
 
-.primerTexto h1
-{
+.primerTexto h1 {
     font-size: 42px;
     margin: 0px 0px 21px;
 }
 
-.primerTexto p 
-{
+.primerTexto p {
     margin: 0px 0px 28px;
     font-size: 17.5px;
 }
 
-.imagem 
-{
+span {
+    color: #793300;
+}
+
+.imagem {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 35%;
 }
 
-.imagem img
-{
+.imagem img {
     height: 60%;
     width: 100%;
     box-sizing: border-box;
     border-radius: 15px;
 }
 
-
-.botoes 
-{
+.botoes {
     display: flex;
     gap: 15px;
     padding: 10.5px 28px;
 }
 
-.botoes button 
-{
+.botoes button {
     cursor: pointer;
     padding: 10.5px 28px;
     border-radius: 10px;
 }
 
-#botonEsquerda 
-{
+#botonEsquerda {
     background-color: #793300;
     border: none;
     color: white;
 }
 
-#botonDireita 
-{
+#botonDireita {
     border: 1px solid #793300;
     border-color: #793300;
 }
 
-@media(max-width: 1700px) 
-{
-    .primerTexto 
-    {
-        margin-top: 180px;
-    }
-}
+/*
+ * ============================================================
+ * 4. SEÇÃO DE PRODUTOS
+ * ============================================================
+ */
 
-@media(max-width: 800px) 
-{
-    .telasPequenas
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 7px;
-    }
-
-    .telasPequenas h2
-    {
-        text-align: center;
-    }
-    .navBar
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .linkBar 
-    {
-        justify-content: center;
-        margin-bottom: 7px;
-    }
-
-    .inicio 
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .primerTexto 
-    {
-        margin-top: 40px;
-    }
-
-    span 
-    {
-        display: flex;
-        justify-content: center;
-    }
-
-    .botoes 
-    {
-        justify-content: center;
-        margin-bottom: 7px;
-    }
-    
-    .imagem
-    {
-        width: 100%;
-    }
-
-    .imagem img
-    {
-        width: 80%;
-    }
-}   
-
-@media(max-width: 500px) 
-{
-    .imagem img
-    {
-        width: 100%;
-    }
-}
-
-/* --- SEÇÃO DE PRODUTOS --- */
 .produtos-section {
     max-width: 1200px;
     display: block;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     margin: 60px 30rem;
 }
 
@@ -243,17 +185,16 @@ span
     margin-bottom: 40px;
 }
 
-/* --- GRID DOS CARDS DE PRODUTO --- */
+/* Grid dos Cards */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-/* --- ESTILO INDIVIDUAL DO CARD --- */
+/* Card Individual */
 .product-card {
     text-align: left;
-    
 }
 
 .product-card__image-wrapper {
@@ -263,13 +204,22 @@ span
     cursor: pointer;
 }
 
+/* * --- AQUI ESTÁ A MÁGICA DO TAMANHO IGUAL --- 
+ */
 .product-card__image-wrapper img {
     width: 100%;
-    height: auto;
+    
+    /* 1. Define uma altura fixa para todas as imagens */
+    height: 250px; 
+    
+    /* 2. Garante que a imagem preencha o espaço sem esticar (corta as bordas se precisar) */
+    object-fit: cover; 
+    
     display: block;
     transition: transform 0.4s ease;
 }
 
+/* Efeito Zoom */
 .product-card:hover .product-card__image-wrapper img {
     transform: scale(1.08);
 }
@@ -288,7 +238,12 @@ span
     line-height: 1.5;
 }
 
-/* --- ESTILOS DO MODAL --- */
+/*
+ * ============================================================
+ * 5. MODAL (POP-UP)
+ * ============================================================
+ */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -348,41 +303,16 @@ span
     color: #2c3e50;
 }
 
-/* --- RESPONSIVIDADE PARA TELAS MENORES --- */
-@media (max-width: 992px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+/*
+ * ============================================================
+ * 6. SEÇÃO MATERIAIS (Novo Layout)
+ * ============================================================
+ */
+
+.minhaParteYuji {
+    padding: 30px 0px;
+    background-color: #ffffff; 
 }
-
-@media (max-width: 576px) {
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media(max-width: 1700px)
-{
-    .produtos-section
-    {
-        margin: 60px 15rem ; 
-    }
-}
-
-@media(max-width: 1400px)
-{
-    .produtos-section
-    {
-        margin: 60px; 
-    }
-
-}
-
-
-
-/* ESTILOS ESPECÍFICOS: MATERIAIS E FOOTER   */
-/* --- Ajustes Gerais da Seção Materiais --- */
 
 #tituloTiposDeMadeira, #tituloAcabamentosDisponiveis, #tituloMateriaisEAcabamentos{
     padding-bottom: 15px;
@@ -394,7 +324,7 @@ span
 
 .opcoesDeMadeira {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue';
-    padding: 90px 20px; /* Padding ajustado */
+    padding: 90px 20px;
     box-sizing: border-box;
 }
 
@@ -430,22 +360,19 @@ span
     border: 1px solid #eee;
     border-radius: 10px;
     padding: 15px;
-    background-color: #fff; /* Adicionei fundo branco padrão se nao tiver ID */
+    background-color: #fff;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
-/* Cores Específicas */
 #carvalho { background-color: #f5f0b4; }
 #cedro { background-color: #f1ceb5; }
 #pinus { background-color: #fffbd1; }
 #mogno { background-color: #f1a57f; }
 
-
-
 .acabamentosDisponiveis .itensContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas no PC */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
 
@@ -461,12 +388,7 @@ span
 
 .acabamento:hover {
     border: 1px solid #d9cbb1;
-    border-radius: 10px;
-    padding: 12px;
     background-color: #f0eeee;
-    text-align: center;
-    cursor: pointer;
-    transform-origin: left;
 }
 
 .imagensDasMadeiras {
@@ -478,235 +400,17 @@ span
     transition: opacity 0.3s ease-in-out;
 }
 
-/* --- Estilos do Novo Footer (Grid em vez de Tabela) --- */
-.finalTwo {
-    padding: 50px 20px;
-    background-color: #f4f4f4; /* Cor de fundo suave */
-}
+/*
+ * ============================================================
+ * 7. RODAPÉ (FOOTER)
+ * ============================================================
+ */
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.footer-col h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-col p {
-    margin-bottom: 8px;
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-.direitos {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.85rem;
-    color: #888;
-}
-
-/*RESPONSIVIDADE (MEDIA QUERIES)*/
-@media (max-width: 900px) {
-    /* Materiais: Imagem vai para baixo do texto */
-    .conteudoPrincipal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .colunaEsquerda {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .imagensDasMadeiras {
-        width: 100%;
-        max-width: 400px; /* Limita tamanho no tablet */
-        height: auto;
-        aspect-ratio: 1/1;
-        margin-top: 20px;
-    }
-    
-    /* Footer: Vira 2 colunas em vez de 3 */
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Materiais: Itens ficam em 1 coluna ou 2 menores */
-    .opcoesDeMadeira {
-        padding: 40px 20px;
-    }
-
-    .modeloMadeira {
-        flex-basis: 100%; /* 1 por linha no celular */
-    }
-
-    .acabamentosDisponiveis .itensContainer {
-        grid-template-columns: repeat(2, 1fr); /* 2 por linha */
-    }
-
-    /* Footer: Tudo empilhado (1 coluna) */
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        text-align: center;
-    }
-
-    /* Ajuste dos botões de redes sociais */
-    .botoesfooter {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .botoeRedes {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-.finalOne 
-{
-    background-color: #000000;
-    padding-bottom: 10px;
-    height: 471.5px;
-    padding-top: 4.75%;
-}
-
-.caixafinal 
-{
-    margin: 0px 285px;
-    margin-left: 220px;
-    padding: 0px 14px;
-}
-
-.primerTextoFooter 
-{
-    text-align: center;
-    margin: 0px 0px 42px 10px;
-}
-
-.primerTextoFooter h2
-{
-    color: #ffffff;
-    font-size: 31.5px;
-    margin: 0px 0px 21px;
-}
-
-.primerTextoFooter p
-{
-    color: #ffffff;
-    font-size: 17.5px;
-}
-
-.botoesfooter
-{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0px;
-}
-
-/* --- ESTILOS DOS BOTÕES DE WHATSAPP E INSTAGRAM (RESTURADO) --- */
-.botoeRedes
-{
-    padding: 21px 28px;
-    height: 142.5px;
-    width: 280px;
-    border: none;
-    border-radius: 15px;
-    background-color: #FDB813; /* Cor amarela original */
-    cursor: pointer;
-    display: flex; /* Para alinhar o conteúdo interno */
-    flex-direction: column; /* Organiza a imagem e o texto em coluna */
-    justify-content: center; /* Centraliza verticalmente */
-    align-items: center; /* Centraliza horizontalmente */
-    text-decoration: none; /* Garante que links não tenham sublinhado */
-    color: inherit; /* Garante que a cor do texto seja a padrão ou herdada */
-}
-
-/* Ajustes para o texto dentro dos botões (agora visíveis) */
-.botaoWhats h3, .botaoWhats p,
-.botaoInta h3, .botaoInta p {
-    display: block; /* Garante que o texto seja exibido */
-    margin: 5px 0 0 0; /* Pequena margem acima do texto, ajuste conforme necessário */
-    color: #000000; /* Defini a cor do texto para preto, pois antes estava branco */
-}
-
-/* Tamanho das imagens dos ícones (mantendo o tamanho original do seu CSS) */
-.imgRedes
-{
-    height: 48px;
-    width: 48px;
-}
-
-
-.ultimoText 
-{
-    font-size: 16px;
-    text-align: center;
-    margin-top: 30px;
-    color: #b5b5b5;
-}
-
-.finalTwo 
-{
-    padding: 42px 0px;
-    color: #ffffff;
-    background-color: #15172b;
-}
-
-.colunasEfilasTABLE
-{
-    border-bottom: 1px solid rgb(102, 99, 137);
-    justify-self: center;
-    border-spacing: 9px;
-    width: 70%;
-}
-
-.table1
-{
-    text-align: left;
-}
-
-.coluna2 
-{
-    padding-right: 20%;
-}
-
-.coluna3
-{
-    padding-left: 30%;
-}
-
-.direitos 
-{
-    text-align: center;
-    color: rgb(180, 181, 183);
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-
-/* PARTE PRETA (CONTATO WHATSAPP E INSTAGRAM) - responsividade corrigida*/
 .finalOne {
     background-color: #000000;
     height: auto; 
     min-height: fit-content;
-    padding: 60px 20px; /* Adicionamos padding para dar espaço em cima e embaixo */
+    padding: 60px 20px;
     color: white;
     text-align: center;
 }
@@ -722,29 +426,29 @@ html, body {
     margin-bottom: 10px;
 }
 
-/* Container dos botões (WhatsApp/Insta) */
 .botoesfooter {
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin: 40px 0; /* Espaço entre o texto de cima e o de baixo */
-    flex-wrap: wrap; /* Permite que os botões quebrem linha se não couberem */
+    margin: 40px 0;
+    flex-wrap: wrap;
 }
 
-/* Estilo dos Botões Amarelos */
 .botoeRedes {
     background-color: #FDB813;
-    color: #1C1C1C; /* Texto preto para contraste */
+    color: #1C1C1C;
     padding: 20px;
     border-radius: 15px;
-    width: 280px; /* Largura fixa no PC */
+    width: 280px;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.2s;
-    box-sizing: border-box; /* Garante que o texto dentro do botão não quebre layout */
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
 }
 
 .botoeRedes:hover {
@@ -758,142 +462,38 @@ html, body {
     object-fit: contain;
 }
 
+.botoeRedes h3, .botoeRedes p {
+    margin: 5px 0 0 0;
+    color: #000000;
+}
 
-/* PARTE AZUL (INFORMAÇÕES) - CORRIGIDA */
+.ultimoText {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+    color: #b5b5b5;
+}
+
 .novo-footer-azul {
     background-color: #0b0c15;
     padding: 60px 20px 30px 20px;
     color: #ffffff;
-    font-family: sans-serif;
 }
 
 .container-footer {
     display: flex;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; /* No PC, alinhado à esquerda */
+    flex-wrap: wrap;
 }
 
 .coluna-info {
-    flex: 1;          /* Cria e pôe uma coluna só em cima da outra */
-    min-width: 200px;
+    flex: 1;
+    min-width: 250px;
 }
 
-.coluna-info h4 {
-    color: #ffffff;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.coluna-info p {
-    color: #dcdcdc;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.linha-divisoria {
-    height: 1px;
-    background-color: #2a2a2a;
-    margin: 40px auto 20px auto;
-    width: 100%;
-    max-width: 1100px;
-}
-
-.direitos {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #666;
-}
-
-
-
-/* RESPONSIVIDADE PARA CELULAR (IMPORTANTE)*/
-@media (max-width: 768px) {
-    
-    /* --- Ajustes da Parte Preta --- */
-    .finalOne {
-        padding: 40px 20px; /* Reduz um pouco o espaço */
-    }
-
-    .botoesfooter {
-        flex-direction: column; /* Empilha os botões */
-        align-items: center;
-        gap: 20px;
-    }
-
-    .botoeRedes {
-        width: 100%; /* Botão ocupa a largura total disponível */
-        max-width: 320px; /* Mas não fica gigante */
-    }
-
-    /* --- Ajustes da Parte Azul --- */
-    .container-footer {
-        flex-direction: column; /* Empilha as colunas de texto */
-        gap: 40px;
-        text-align: center; /* Centraliza o texto no celular */
-    }
-
-    .coluna-info {
-        border-bottom: 1px solid #1f1f1f; /* Linha sutil separando seções */
-        padding-bottom: 20px;
-    }
-    
-    .coluna-info:last-child {
-        border-bottom: none;
-    }
-}
-
-/* RESPONSIVIDADE DO RODAPÉ (CELULAR) */
-@media (max-width: 768px) {
-    .footer-grid {
-        /* Muda para 1 coluna única */
-        grid-template-columns: 1fr; 
-        text-align: center; /* Centraliza o texto no celular */
-        gap: 30px;
-    }
-
-    .footer-col {
-        padding-bottom: 20px;
-        border-bottom: 1px solid #222; /* Uma linha sutil separando as seções no celular */
-    }
-    
-    .footer-col:last-child {
-        border-bottom: none;
-    }
-}
-
-
-/* ESTILOS DO NOVO FOOTER (Sem Tabelas) */
-/* Fundo Azul Escuro (Igual da imagem) */
-.novo-footer-azul {
-    background-color: #0b0c15; /* Azul quase preto */
-    padding: 60px 20px 30px 20px;
-    color: #ffffff;
-    font-family: sans-serif;
-}
-
-/* Container que segura as 3 colunas lado a lado */
-.container-footer {
-    display: flex;
-    justify-content: center; /* Centraliza o bloco */
-    gap: 80px; /* Espaço entre as colunas */
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Importante para responsividade */
-}
-
-/* Estilo de cada Coluna individual */
-.coluna-info {
-    flex: 1; /* Faz as colunas terem tamanho igual */
-    min-width: 250px; /* Tamanho mínimo para não espremer */
-}
-
-/* Títulos das colunas (MadeiraCraft, Nossos Produtos...) */
 .coluna-info h4 {
     color: #ffffff;
     font-size: 1.2rem;
@@ -902,7 +502,6 @@ html, body {
     text-transform: uppercase;
 }
 
-/* Textos das colunas */
 .coluna-info p {
     color: #dcdcdc;
     margin-bottom: 10px;
@@ -910,7 +509,6 @@ html, body {
     line-height: 1.6;
 }
 
-/* Linha fina decorativa */
 .linha-divisoria {
     height: 1px;
     background-color: #333;
@@ -924,21 +522,94 @@ html, body {
     color: #777;
 }
 
+/*
+ * ============================================================
+ * 8. RESPONSIVIDADE (MEDIA QUERIES)
+ * ============================================================
+ */
 
-/*  responsividade do footer */
-@media (max-width: 850px) {
-    .container-footer {
-        flex-direction: column; /* Empilha um embaixo do outro */
-        gap: 40px;
-        text-align: center; /* Centraliza o texto no celular */
+@media(max-width: 1700px) {
+    .primerTexto { margin-top: 180px; }
+    .produtos-section { margin: 60px 15rem; }
+}
+
+@media(max-width: 1400px) {
+    .produtos-section { margin: 60px; }
+}
+
+@media (max-width: 992px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .conteudoPrincipal {
+        flex-direction: column;
+        align-items: center;
     }
+    .colunaEsquerda { width: 100%; }
+    .imagensDasMadeiras {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 1/1;
+        margin-top: 20px;
+    }
+}
 
+@media(max-width: 850px) {
+    .container-footer {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
     .coluna-info {
-        border-bottom: 1px solid #222; /* Linha separadora no celular */
+        border-bottom: 1px solid #222;
         padding-bottom: 20px;
     }
+    .coluna-info:last-child { border-bottom: none; }
+}
 
-    .coluna-info:last-child {
-        border-bottom: none;
+@media(max-width: 800px) {
+    .telasPequenas {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 7px;
     }
+    .navBar { flex-direction: column; }
+    .linkBar { justify-content: center; margin-bottom: 7px; }
+    
+    .inicio {
+        flex-direction: column;
+        align-items: center;
+    }
+    .primerTexto { margin-top: 40px; }
+    span { display: flex; justify-content: center; }
+    .botoes { justify-content: center; margin-bottom: 7px; }
+    
+    .imagem { width: 100%; }
+    .imagem img { width: 80%; }
+}
+
+@media (max-width: 768px) {
+    .finalOne { padding: 40px 20px; }
+    .botoesfooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .botoeRedes { width: 100%; max-width: 320px; }
+}
+
+@media (max-width: 600px) {
+    .opcoesDeMadeira { padding: 40px 20px; }
+    .modeloMadeira { flex-basis: 100%; }
+    .acabamentosDisponiveis .itensContainer { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 576px) {
+    .products-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width: 500px) {
+    .imagem img { width: 100%; }
 }
