@@ -569,6 +569,7 @@ span {
     .coluna-info:last-child { border-bottom: none; }
 }
 
+/*ajusta o site para telas que sejam menores a 800 pixels*/
 @media(max-width: 800px) {
     .telasPequenas {
         flex-direction: column;
