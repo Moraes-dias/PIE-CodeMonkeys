@@ -363,16 +363,15 @@ span
     background-color: #f0eeee;
     text-align: center;
     cursor: pointer;
-    transform-origin: left;
 }
 
 .imagensDasMadeiras {
     width: 350px;
     height: 350px;
-    object-fit: cover;
+    object-fit: cover;             
     border-radius: 10px;
     flex-shrink: 0;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out; /* Faz com que a imagem "desapareça" e se torne transparente */
 }
 
 /* --- Estilos do Novo Footer (Grid em vez de Tabela) --- */
